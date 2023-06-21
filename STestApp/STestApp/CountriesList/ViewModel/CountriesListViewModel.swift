@@ -8,9 +8,9 @@
 import Foundation
 
 class CountriesListViewModel {
-    private let networkService: CountriesListService
+    private let networkService: ICountriesListService
     var countriesListModel: Observable<[CountriesListModel]> = Observable([])
-    init(networkService: CountriesListService) {
+    init(networkService: ICountriesListService) {
         self.networkService = networkService
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 
 class CountryDetailViewModel {
-    private let networkService: CountryDetailService
+    private let networkService: ICountryDetailService
     var dataProperties = ["Region", "Country Name", "Capital", "CapitalCoordinates", "Population", "Area", "Currencies", "Timezones"]
     
     private var country: Observable<[CountryDetailModel]> = Observable([])
@@ -16,7 +16,7 @@ class CountryDetailViewModel {
     var currencyList: [String] = []
     var cca2Code: String
     
-    init(cca2Code: String, networkService: CountryDetailService) {
+    init(cca2Code: String, networkService: ICountryDetailService) {
         self.cca2Code = cca2Code
         self.networkService = networkService
     }
