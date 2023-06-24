@@ -20,7 +20,7 @@ class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-        let countriesListCoordinator = CountriesListCoordinator(navigationController: navigationController)
+        let countriesListCoordinator = CountriesListCoordinator(navigationController: navigationController, factory: FactoryViewControllers())
         coordinate(to: countriesListCoordinator)
     }
 }

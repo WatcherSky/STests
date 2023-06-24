@@ -14,16 +14,17 @@ protocol CountriesListFlow: AnyObject {
 }
 
 class CountriesListCoordinator: Coordinator, CountriesListFlow {
+    var factory: FactoryViewControllers
+    
     let navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, factory: FactoryViewControllers) {
         self.navigationController = navigationController
+        self.factory = factory
     }
     
     func start() {
-        let networkService = CountriesListService()
-        let viewModel = CountriesListViewModel(networkService: networkService)
-        let countriesListViewController = CountriesListViewController(viewModel: viewModel)
+        let countriesListViewController = factory.createCountriesListVC()
         countriesListViewController.coordinator = self
         navigationController.pushViewController(countriesListViewController, animated: true)
     }
@@ -31,7 +32,7 @@ class CountriesListCoordinator: Coordinator, CountriesListFlow {
     
     // MARK: - Flow Methods
     func coordinateToCountry(cca2Code: String) {
-        let countryCoordinator = CountryDetailCoordinator(cca2Code: cca2Code, navigationController: navigationController)
+        let countryCoordinator = CountryDetailCoordinator(cca2Code: cca2Code, factory: FactoryViewControllers(), navigationController: navigationController)
         coordinate(to: countryCoordinator)
     }
 }

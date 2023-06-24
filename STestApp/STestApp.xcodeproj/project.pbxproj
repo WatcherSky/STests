@@ -41,6 +41,7 @@
 		E78330E62A14C0C80017F888 /* CellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78330E52A14C0C80017F888 /* CellButton.swift */; };
 		E7D340F82A2E042600B41087 /* CountryDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D340F72A2E042600B41087 /* CountryDetailTableViewCell.swift */; };
 		E7D340FA2A2F449000B41087 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D340F92A2F449000B41087 /* CellType.swift */; };
+		E7E241BA2A470F0200D0B5D7 /* FactoryViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E241B92A470F0200D0B5D7 /* FactoryViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		E78330E52A14C0C80017F888 /* CellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButton.swift; sourceTree = "<group>"; };
 		E7D340F72A2E042600B41087 /* CountryDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailTableViewCell.swift; sourceTree = "<group>"; };
 		E7D340F92A2F449000B41087 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		E7E241B92A470F0200D0B5D7 /* FactoryViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +116,11 @@
 			children = (
 				E78330DA2A140CB50017F888 /* AppDelegate */,
 				E7381FFC2A0E697300EBE44B /* Binding */,
-				E7381FD02A0E62CB00EBE44B /* Coordinator */,
 				E78330D92A140CAB0017F888 /* Constants */,
-				E738202F2A10E7BC00EBE44B /* CommonModels */,
+				E7381FD02A0E62CB00EBE44B /* Coordinator */,
+				E7E241B82A470EED00D0B5D7 /* Factory */,
 				E78330D52A13B63E0017F888 /* Fonts */,
+				E738202F2A10E7BC00EBE44B /* CommonModels */,
 				E7381FD72A0E63EF00EBE44B /* CountriesList */,
 				E73820212A0FE2F300EBE44B /* CountryDetail */,
 				E78330DB2A140CC30017F888 /* Assets */,
@@ -396,6 +399,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		E7E241B82A470EED00D0B5D7 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E7E241B92A470F0200D0B5D7 /* FactoryViewControllers.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +509,7 @@
 				E7381FCF2A0E62BA00EBE44B /* Coordinator.swift in Sources */,
 				E78330D02A1389C00017F888 /* HeaderCollectionReusableView.swift in Sources */,
 				E78330CB2A125F180017F888 /* JumpAvoidingFlowLayout.swift in Sources */,
+				E7E241BA2A470F0200D0B5D7 /* FactoryViewControllers.swift in Sources */,
 				E738202C2A0FEB6F00EBE44B /* Currencies.swift in Sources */,
 				E738200E2A0E6BD300EBE44B /* CountryDetailViewController.swift in Sources */,
 				E78330E62A14C0C80017F888 /* CellButton.swift in Sources */,

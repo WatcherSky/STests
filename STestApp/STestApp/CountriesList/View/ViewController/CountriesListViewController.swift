@@ -86,6 +86,7 @@ class CountriesListViewController: UIViewController {
         if let cca2Code = sender.cca2Code {
             coordinator?.coordinateToCountry(cca2Code: cca2Code)
         }
+        
     }
 }
 

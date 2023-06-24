@@ -13,19 +13,20 @@ protocol CountryDetailFlow: AnyObject {
 }
 
 class CountryDetailCoordinator: Coordinator, CountryDetailFlow {
+    var factory: FactoryViewControllers
     
     weak var navigationController: UINavigationController?
     var cca2Code: String
     
-    init(cca2Code: String, navigationController: UINavigationController) {
+    init(cca2Code: String, factory: FactoryViewControllers, navigationController: UINavigationController) {
         self.cca2Code = cca2Code
+        self.factory = factory
         self.navigationController = navigationController
     }
     
     func start() {
-        let networkService = CountryDetailService()
-        let viewModel = CountryDetailViewModel(cca2Code: cca2Code, networkService: networkService)
-        let countryViewController = CountryDetailViewController(viewModel: viewModel)
+        
+        let countryViewController = factory.createCountryDetailVC(cca2Code: cca2Code)
         countryViewController.coordinator = self
         navigationController?.pushViewController(countryViewController, animated: true)
     }
